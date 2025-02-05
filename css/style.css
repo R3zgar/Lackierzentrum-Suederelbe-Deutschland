@@ -12,11 +12,12 @@
 
   --- 02 COLORS
   - Primary: #343a40
-  - Tints:
+  - Tints: #ebebec
   - Shades:
   - Accents:
   - Greys:
-  #555
+  #444
+  #333
 
   --- 05 SHADOWS
 
@@ -54,7 +55,12 @@ body {
   font-family: sans-serif;
   line-height: 1;
   font-weight: 400;
-  color: #555;
+  color: #444;
+}
+
+.section-hero {
+  background-color: #ebebec;
+  padding: 9.6rem 0;
 }
 
 .hero {
@@ -62,8 +68,72 @@ body {
   margin: 0 auto;
   display: grid;
   grid-template-columns: 1fr 1fr;
+  gap: 9.6rem;
+  align-items: center;
+}
+
+.heading-primary {
+  font-size: 5.2rem;
+  font-weight: 700;
+  line-height: 1.05;
+  color: #333;
+  letter-spacing: -0.5px;
+  margin-bottom: 3.2rem;
+}
+
+.hero-description {
+  font-size: 2rem;
+  line-height: 1.6;
+  margin-bottom: 4.8rem;
+}
+
+.btn:link,
+.btn:visited {
+  display: inline-block;
+  background-color: #343a40;
+  text-decoration: none;
+  font-size: 2rem;
+  padding: 1.6rem 3.2rem;
+  border-radius: 9px;
+
+  /* Put transition on original "state" but not hover or active */
+  /* bacground-color(action just for background color) all(action for background and color) 0.3s(0.3s (seconde) */
+  transition: background-color 0.3s;
+}
+
+.btn--full:link,
+.btn--full:visited {
+  background-color: #343a40;
+  color: #fff;
+}
+
+.btn--full:hover,
+.btn--full:active {
+  background-color: #2f343a;
+}
+
+.btn--outline:link,
+.btn--outline:visited {
+  background-color: #fff;
+  color: #444;
+}
+
+.btn--outline:hover,
+.btn--outline:active {
+  background-color: #ebebec;
+
+  /* don't user border but box shadow */
+  /* border: 3px solid #fff; */
+
+  /* Trick to add border inside */
+  /* inset(creat element in inside) 0(horizant) 0(vertical) 0(any blour) 3px(the line width) #fff(the line color) */
+  box-shadow: inset 0 0 0 3px #fff;
 }
 
 .hero-img {
   width: 100%;
+}
+
+.margin-right-sm {
+  margin-right: 1.6rem !important;
 }
