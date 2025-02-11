@@ -296,3 +296,33 @@
 .gallery-item img:hover {
   transform: scale(1.1);
 }
+
+/*******************************/
+/* FEATURE SECTION */
+/*******************************/
+
+.section-feature {
+  padding: 9.6rem 0;
+}
+
+.feature-icon {
+  color: #343a40;
+  height: 3.2rem;
+  width: 3.2rem;
+  background-color: #ebebec;
+  margin-bottom: 3.2rem;
+  padding: 1.6rem;
+  border-radius: 50%;
+}
+
+.feature-title {
+  font-size: 2.4rem;
+  color: #333;
+  font-weight: 700;
+  margin-bottom: 1.6rem;
+}
+
+.feature-text {
+  font-size: 1.8rem;
+  line-height: 1.8;
+}
