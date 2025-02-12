@@ -343,13 +343,26 @@
   border-radius: 11px;
   overflow: hidden;
 
-  background-image: linear-gradient(to right bottom, #717579, #343a40);
+  background-image: linear-gradient(to right bottom, #aeb0b3, #343a40);
 
   /* temporary */
   height: 50rem;
 }
 
 .cta-text-box {
+  padding: 4.8rem 6.8rem 6.8rem 6.4rem;
+  color: #1a1d20;
+}
+
+.cta .heading-secondary {
+  color: #1f2326;
+  margin-bottom: 3.2rem;
+}
+
+.cta-text {
+  font-size: 1.8rem;
+  line-height: 1.8;
+  margin-bottom: 4.8rem;
 }
 
 .cta-img-box {
@@ -361,4 +374,11 @@
     url(../img/cta-cover.webp);
   background-size: cover;
   background-position: center;
+}
+
+.cta-form {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  column-gap: 3.2rem;
+  row-gap: 2.4rem;
 }
