@@ -326,3 +326,39 @@
   font-size: 1.8rem;
   line-height: 1.8;
 }
+
+/*******************************/
+/* CTA SECTION */
+/*******************************/
+
+.section-cta {
+  padding: 9.6rem 0;
+}
+
+.cta {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  /* background-color: #343a40; */
+  box-shadow: 0 2.4rem 4.8rem rgba(0, 0, 0, 0.2);
+  border-radius: 11px;
+  overflow: hidden;
+
+  background-image: linear-gradient(to right bottom, #717579, #343a40);
+
+  /* temporary */
+  height: 50rem;
+}
+
+.cta-text-box {
+}
+
+.cta-img-box {
+  background-image: linear-gradient(
+      to right bottom,
+      rgba(113, 117, 121, 0.35),
+      rgba(52, 58, 64, 0.35)
+    ),
+    url(../img/cta-cover.webp);
+  background-size: cover;
+  background-position: center;
+}
