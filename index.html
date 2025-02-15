@@ -28,6 +28,12 @@
       src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
     ></script>
 
+    <!-- this code is a library for smooth scrolling for Safari browser -->
+    <script
+      defer
+      src=" https://unpkg.com/smoothscroll-polyfill@0.4.4/dist/smoothscroll.min.js"
+    ></script>
+
     <script defer src="js/script.js"></script>
 
     <title>
@@ -47,10 +53,14 @@
       <nav class="main-nav">
         <ul class="main-nav-list">
           <li><a class="main-nav-link" href="#">Startseite</a></li>
-          <li><a class="main-nav-link" href="#">Unser Arbeitsprozess</a></li>
-          <li><a class="main-nav-link" href="#">Zusatzleistungen</a></li>
-          <li><a class="main-nav-link" href="#">Erfahrungsberichte</a></li>
-          <li><a class="main-nav-link nav-cta" href="#">Schnellkontak</a></li>
+          <li><a class="main-nav-link" href="#how">Unser Arbeitsprozess</a></li>
+          <li><a class="main-nav-link" href="#service">Zusatzleistungen</a></li>
+          <li>
+            <a class="main-nav-link" href="#testimonials">Erfahrungsberichte</a>
+          </li>
+          <li>
+            <a class="main-nav-link nav-cta" href="#cta">Schnellkontak</a>
+          </li>
         </ul>
       </nav>
 
@@ -74,8 +84,10 @@
               Technik und höchster Präzision sorgen wir für perfekte Ergebnisse.
               Vertrauen Sie auf Qualität, Erfahrung und Innovation!
             </p>
-            <a href="#" class="btn btn--full margin-right-sm">Jetzt Kontakt</a>
-            <a href="#" class="btn btn--outline">Mehr erfahren &darr;</a>
+            <a href="#cta" class="btn btn--full margin-right-sm"
+              >Jetzt Kontakt</a
+            >
+            <a href="#how" class="btn btn--outline">Mehr erfahren &darr;</a>
             <div class="customers">
               <div class="customers-img">
                 <img
@@ -118,7 +130,7 @@
         </div>
       </section>
 
-      <section class="section-how">
+      <section class="section-how" id="how">
         <div class="container">
           <span class="subheading">Unser Arbeitsprozess</span>
           <h2 class="heading-secondary">
@@ -191,7 +203,7 @@
         </div>
       </section>
 
-      <section class="section-services">
+      <section class="section-services" id="service">
         <div class="container center-text">
           <span class="subheading">Zusatzleistungen</span>
           <h2 class="heading-secondary">Mehr Service für Ihr Fahrzeug</h2>
@@ -446,7 +458,7 @@
         </div>
       </section>
 
-      <section class="section-testimonials">
+      <section class="section-testimonials" id="testimonials">
         <div class="testimonials-container">
           <span class="subheading">Erfahrungsberichte</span>
           <h2 class="heading-secondary">Erfahrungen, denen Sie vertrauen</h2>
@@ -658,7 +670,7 @@
         </div>
       </section>
 
-      <section class="section-cta">
+      <section class="section-cta" id="cta">
         <div class="container">
           <div class="cta">
             <div class="cta-text-box">
