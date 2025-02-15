@@ -156,6 +156,8 @@
   /* MOBILE NAVIGATION */
   .btn-mobile-nav {
     display: block;
+    /* z-index for focus the icon in the top of header after writing js codes */
+    z-index: 9999;
   }
 
   .main-nav {

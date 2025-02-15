@@ -1,10 +1,19 @@
 // This line code for testing connection JavaScript file
 console.log("Hello World!");
 
-// this code every year otomatic changed for the that year current.
+///////////////////////////////////////////////////////////
+// Set current year-automatiqly change year every 1 janvier to current year
 const yearEl = document.querySelector(".year");
 const currentYear = new Date().getFullYear();
 yearEl.textContent = currentYear;
+
+///////////////////////////////////////////////////////////
+// Make mobile navigation work
+const btnNavEl = document.querySelector(".btn-mobile-nav");
+const headerEl = document.querySelector(".header");
+btnNavEl.addEventListener("click", function () {
+  headerEl.classList.toggle("nav-open");
+});
 
 ///////////////////////////////////////////////////////////
 // Fixing flexbox gap property missing in some Safari versions
