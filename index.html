@@ -703,13 +703,14 @@
                 Qualität!
               </p>
 
-              <form class="cta-form" action="#">
+              <form class="cta-form" name="contact" data-netlify="true">
                 <div>
                   <label for="full-name">Vorname</label>
                   <input
                     type="text"
                     id="full-name"
                     placeholder="Max"
+                    name="full-name"
                     required
                   />
                 </div>
@@ -720,6 +721,7 @@
                     type="text"
                     id="last-name"
                     placeholder="Mustermann"
+                    name="last-name"
                     required
                   />
                 </div>
@@ -730,6 +732,7 @@
                     type="tel"
                     id="phone-number"
                     placeholder="+49 170 1234567"
+                    name="phone-number"
                   />
                 </div>
 
@@ -739,6 +742,7 @@
                     type="email"
                     id="email"
                     placeholder="beispiel@email.de"
+                    name="email"
                     required
                   />
                 </div>
@@ -748,6 +752,7 @@
                   <textarea
                     id="message"
                     placeholder="Ihre Nachricht..."
+                    name="message"
                     required
                   ></textarea>
                 </div>
