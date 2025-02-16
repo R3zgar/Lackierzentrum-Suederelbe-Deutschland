@@ -138,11 +138,16 @@
             </div>
           </div>
           <div class="hero-img-box">
-            <img
-              src="img/hero.png"
-              alt="Lackierzentrum Süderelbe – Experten für Fahrzeuglackierung & Karosseriearbeiten. Präzise Autolackierung, professionelle Lackaufbereitung und Unfallreparaturen mit modernster Technik."
-              class="hero-img"
-            />
+            <!-- this code for the version that not working webp format. maybe for the less versions,  -->
+            <picture>
+              <source srcset="img/hero.webp" type="image/webp" />
+              <source srcset="img/hero.png" type="image/png" />
+              <img
+                src="img/hero.png"
+                class="hero-img"
+                alt="Lackierzentrum Süderelbe – Experten für Fahrzeuglackierung & Karosseriearbeiten. Präzise Autolackierung, professionelle Lackaufbereitung und Unfallreparaturen mit modernster Technik."
+              />
+            </picture>
           </div>
         </div>
       </section>
