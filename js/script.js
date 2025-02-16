@@ -93,6 +93,18 @@ function checkFlexGap() {
 }
 checkFlexGap();
 
+// this code for the social links, for open in the different window
+document.addEventListener("DOMContentLoaded", function () {
+  const socialLinks = document.querySelectorAll(".social-links a");
+
+  socialLinks.forEach((link) => {
+    link.addEventListener("click", function (event) {
+      event.preventDefault();
+      window.open(this.href, "_blank");
+    });
+  });
+});
+
 // https://unpkg.com/smoothscroll-polyfill@0.4.4/dist/smoothscroll.min.js
 
 /*
