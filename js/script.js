@@ -105,6 +105,21 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 });
 
+document.addEventListener("DOMContentLoaded", function () {
+  const towingService = document.querySelector(".towing-service");
+
+  function checkScroll() {
+    const position = towingService.getBoundingClientRect().top;
+    const windowHeight = window.innerHeight;
+
+    if (position < windowHeight - 100) {
+      towingService.classList.add("show");
+    }
+  }
+
+  window.addEventListener("scroll", checkScroll);
+});
+
 // https://unpkg.com/smoothscroll-polyfill@0.4.4/dist/smoothscroll.min.js
 
 /*

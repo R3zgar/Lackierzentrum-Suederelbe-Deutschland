@@ -234,11 +234,45 @@
   border-radius: 11px;
   overflow: hidden;
   transition: all 0.4s;
+  position: relative;
+  overflow: hidden;
 }
 
 .services:hover {
   transform: translateY(-1.2rem);
   box-shadow: 0 3.2rem 6.4rem rgba(0, 0, 0, 0.08);
+}
+
+.services-special::after {
+  content: "★";
+  position: absolute;
+  top: 3%;
+  right: -22%;
+
+  font-size: 2.8rem;
+  font-weight: 700;
+  color: #ffec99;
+  background-color: #20c997;
+  padding: 0.5rem 9rem;
+  transform: rotate(45deg);
+  white-space: nowrap;
+}
+
+.towing-service {
+  font-size: 2.2rem;
+  line-height: 1.6;
+  text-align: center;
+
+  color: #f76707;
+  position: relative;
+  opacity: 0;
+  transform: translateX(-100%);
+  transition: opacity 1s ease-out, transform 1s ease-out;
+}
+
+.towing-service.show {
+  opacity: 1;
+  transform: translateX(0);
 }
 
 .services-content {
