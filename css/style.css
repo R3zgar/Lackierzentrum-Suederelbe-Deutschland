@@ -249,11 +249,11 @@
   top: 3%;
   right: -22%;
 
-  font-size: 2.8rem;
+  font-size: 2.2rem;
   font-weight: 700;
   color: #ffec99;
   background-color: #20c997;
-  padding: 0.5rem 9rem;
+  padding: 0.35rem 9rem;
   transform: rotate(45deg);
   white-space: nowrap;
 }
@@ -503,6 +503,112 @@
 .cta *:focus {
   outline: none;
   box-shadow: 0 0 0 0.5rem rgba(235, 235, 236, 0.5);
+}
+/*******************************/
+/* LOCATION-HOURS SECTION */
+/*******************************/
+.section-location-hours {
+  padding: 0 0 12.8rem 0;
+}
+
+.navigation {
+  display: grid;
+  justify-content: space-between;
+  align-items: center;
+  padding: 3rem;
+  grid-template-columns: 60% 40%;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+  border-radius: 11px;
+  gap: 5rem;
+  background-color: #ebebec;
+}
+
+.location-title {
+  font-size: 2rem;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+
+.location-address {
+  font-size: 1.6rem;
+  margin-bottom: 1.8rem;
+}
+
+.map-container {
+  width: 100%;
+  height: 350px;
+  border-radius: 10px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease-in-out;
+}
+
+.map-container:hover {
+  transform: scale(1.02);
+}
+
+.location-title,
+.hours-title {
+  display: flex;
+  flex-shrink: 0;
+  align-items: center;
+  font-size: 2rem;
+  font-weight: 600;
+  margin-bottom: 2rem;
+}
+
+.location-title ion-icon,
+.hours-title ion-icon {
+  margin-right: 1.5rem;
+}
+
+.opening-hours-box {
+  max-width: 38rem;
+  height: 100%;
+  padding: 2rem;
+  background-color: #fff;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  text-align: left;
+}
+
+.hours-title {
+  margin-bottom: 5rem;
+}
+
+.hours-text {
+  font-size: 1.6rem;
+  margin-bottom: 3rem;
+  line-height: 1.5;
+}
+
+.hours-list {
+  list-style: none;
+  padding: 0;
+  margin-bottom: 3rem;
+}
+
+.hours-list li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 1.6rem;
+  padding: 0.5rem 0;
+  border-bottom: 1px solid #ddd;
+  gap: 2rem;
+  margin-bottom: 1.5rem;
+}
+
+.hours-list li:last-child {
+  border-bottom: 4rem;
+}
+
+.hours-note {
+  font-size: 1.4rem;
+  font-style: italic;
+  color: #555;
+  line-height: 1.6;
 }
 
 /*******************************/
