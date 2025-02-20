@@ -120,6 +120,24 @@ document.addEventListener("DOMContentLoaded", function () {
   window.addEventListener("scroll", checkScroll);
 });
 
+document.addEventListener("DOMContentLoaded", function () {
+  const mapLink = document.getElementById("mapLink");
+  const latitude = 53.4629;
+  const longitude = 9.795;
+
+  mapLink.addEventListener("click", function (event) {
+    event.preventDefault();
+
+    if (navigator.userAgent.match(/iPhone|iPad|Mac/i)) {
+      window.location.href = `maps://maps.apple.com/?q=${latitude},${longitude}`;
+    } else if (navigator.userAgent.match(/Android/i)) {
+      window.location.href = `geo:${latitude},${longitude}?q=${latitude},${longitude}`;
+    } else {
+      window.location.href = `https://www.google.com/maps?q=${latitude},${longitude}`;
+    }
+  });
+});
+
 // https://unpkg.com/smoothscroll-polyfill@0.4.4/dist/smoothscroll.min.js
 
 /*
