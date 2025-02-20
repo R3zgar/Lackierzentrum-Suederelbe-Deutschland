@@ -79,6 +79,29 @@
     right: -13%;
     top: 3%;
   }
+
+  .navigation {
+    grid-template-columns: 60% 40%;
+    gap: 4rem;
+    padding: 2rem;
+  }
+
+  .opening-hours-box {
+    max-width: 34rem;
+    padding: 1.8rem;
+  }
+
+  .map-container {
+    height: 300px;
+  }
+
+  .hours-list li {
+    font-size: 1.4rem;
+  }
+
+  .hours-note {
+    font-size: 1.3rem;
+  }
 }
 
 /*************************/
@@ -238,6 +261,33 @@
     right: -16%;
     top: 3%;
   }
+
+  .navigation {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+    padding: 2rem;
+  }
+
+  .opening-hours-box {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .map-container {
+    height: 280px;
+  }
+
+  .hours-list li {
+    font-size: 1.4rem;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.8rem;
+  }
+
+  .location-title,
+  .hours-title {
+    font-size: 1.8rem;
+  }
 }
 
 /*************************/
@@ -365,6 +415,32 @@
     padding: 0.3rem 7rem;
     right: -10%;
     top: 5%;
+  }
+
+  .navigation {
+    padding: 1.4rem;
+    gap: 3rem;
+  }
+
+  .opening-hours-box {
+    padding: 1.4rem;
+  }
+
+  .map-container {
+    height: 220px;
+  }
+
+  .location-title,
+  .hours-title {
+    font-size: 1.8rem;
+  }
+
+  .hours-list li {
+    font-size: 1.6rem;
+  }
+
+  .hours-note {
+    font-size: 1.4rem;
   }
 }
 
