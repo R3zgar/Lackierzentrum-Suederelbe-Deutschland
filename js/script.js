@@ -138,6 +138,21 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 });
 
+// this code for the external links <a> Elements
+
+document.addEventListener("DOMContentLoaded", function () {
+  const footerLinks = document.querySelectorAll(".footer-link");
+
+  footerLinks.forEach((link) => {
+    link.addEventListener("click", function (event) {
+      if (this.getAttribute("href").includes(".html")) {
+        event.stopPropagation(); // Stop propagation to prevent other JS scripts from blocking it
+        window.location.href = this.href;
+      }
+    });
+  });
+});
+
 // https://unpkg.com/smoothscroll-polyfill@0.4.4/dist/smoothscroll.min.js
 
 /*

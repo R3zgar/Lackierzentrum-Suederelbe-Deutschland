@@ -709,6 +709,11 @@
   gap: 2.4rem;
 }
 
+.footer-link {
+  pointer-events: auto !important;
+  z-index: 9999;
+}
+
 .footer-link:link,
 .footer-link:visited {
   text-decoration: none;
@@ -720,4 +725,21 @@
 .footer-link:hover,
 .footer-link:active {
   color: #333;
+}
+
+/*******************************/
+/* IMPRESSUM SECTION */
+/*******************************/
+
+.step-description a:link,
+a:visited {
+  text-decoration: none;
+  font-size: 1.6rem;
+  color: #241f6e;
+  transition: all 0.3s;
+}
+
+.step-description a:hover,
+.step-description a:active {
+  color: #0e0909;
 }
