@@ -267,7 +267,7 @@
   position: relative;
   opacity: 0;
   transform: translateX(-100%);
-  transition: opacity 1s ease-out, transform 1s ease-out;
+  transition: opacity 0.8s ease-out, transform 0.8s ease-out;
 }
 
 .towing-service.show {
@@ -509,7 +509,7 @@
 /* LOCATION-HOURS SECTION */
 /*******************************/
 .section-location-hours {
-  padding: 0 0 12.8rem 0;
+  padding: 0 0 9.8rem 0;
 }
 
 .navigation {
@@ -555,7 +555,7 @@
   left: 50%;
   transform: translateX(-50%);
   background: rgba(0, 0, 0, 0.7);
-  color: white;
+  color: #fff;
   padding: 10px 15px;
   border-radius: 5px;
   font-size: 1.6rem;
@@ -628,6 +628,38 @@
   font-style: italic;
   color: #555;
   line-height: 1.6;
+}
+
+/*******************************/
+/* LOCATION-HOURS SECTION */
+/*******************************/
+.section-sertificat {
+  /* top / right / bottom / left */
+  padding: 0 0 12.8rem 0;
+}
+
+.section-sertificat .heading-secondary {
+  margin-bottom: 2.8rem;
+}
+
+.section-sertificat .step-description {
+  margin-bottom: 2.8rem;
+}
+
+.section-sertificat .gallery {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 2.2rem;
+  padding: 2.2rem;
+  background-color: #fff;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+}
+
+.section-sertificat .gallery-item {
+  background-color: #eee;
+  box-shadow: 0 4px 18px rgba(0, 0, 0, 0.2);
+  border-radius: 8px;
 }
 
 /*******************************/
@@ -731,7 +763,7 @@
 /* IMPRESSUM SECTION */
 /*******************************/
 
-.step-description a:link,
+/* .step-description a:link,
 a:visited {
   text-decoration: none;
   font-size: 1.6rem;
@@ -742,4 +774,4 @@ a:visited {
 .step-description a:hover,
 .step-description a:active {
   color: #0e0909;
-}
+} */
