@@ -141,14 +141,16 @@ document.addEventListener("DOMContentLoaded", function () {
 // this code for the external links <a> Elements
 
 document.addEventListener("DOMContentLoaded", function () {
-  const footerLinks = document.querySelectorAll(".footer-link");
+  const footerLinks = document.querySelectorAll(
+    ".footer-link",
+    "a[href^='/impressum.html']"
+  );
 
   footerLinks.forEach((link) => {
     link.addEventListener("click", function (event) {
-      if (this.getAttribute("href").includes(".html")) {
-        event.stopPropagation(); // Stop propagation to prevent other JS scripts from blocking it
-        window.location.href = this.href;
-      }
+      event.preventDefault();
+      const targetUrl = this.href;
+      window.location.href = targetUrl;
     });
   });
 });
