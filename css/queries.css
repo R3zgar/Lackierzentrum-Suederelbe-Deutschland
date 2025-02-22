@@ -339,7 +339,8 @@
   .grid--2-cols,
   .grid--3-cols,
   .grid--4-cols,
-  .grid--6-cols {
+  .grid--6-cols,
+  .grid--footer {
     grid-template-columns: 1fr;
   }
 
@@ -410,9 +411,11 @@
     grid-column: span 2;
     margin-bottom: 3.2rem;
   }
+
   .social-links {
     gap: 2.4rem;
   }
+
   .copyright {
     margin-top: 1.6rem;
   }

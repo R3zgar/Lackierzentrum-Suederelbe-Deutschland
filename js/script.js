@@ -155,6 +155,79 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 });
 
+// the code for photo modal
+document.addEventListener("DOMContentLoaded", function () {
+  const galleryImages = document.querySelectorAll(".gallery-item img");
+  const modal = document.getElementById("modal");
+  const modalImg = document.getElementById("modalImg");
+  const closeBtn = document.getElementById("closeBtn");
+  const prevBtn = document.getElementById("prevBtn");
+  const nextBtn = document.getElementById("nextBtn");
+
+  let currentIndex = 0;
+  const images = Array.from(galleryImages).map((img) => img.src);
+
+  // open modal when click image
+  galleryImages.forEach((img, index) => {
+    img.addEventListener("click", function () {
+      currentIndex = index;
+      openModal();
+    });
+  });
+
+  function openModal() {
+    modal.style.display = "flex";
+    modalImg.src = images[currentIndex];
+  }
+
+  function closeModal() {
+    modal.style.display = "none";
+  }
+
+  nextBtn.addEventListener("click", function (e) {
+    e.stopPropagation();
+    currentIndex = (currentIndex + 1) % images.length;
+    modalImg.src = images[currentIndex];
+  });
+
+  prevBtn.addEventListener("click", function (e) {
+    e.stopPropagation();
+    currentIndex = (currentIndex - 1 + images.length) % images.length;
+    modalImg.src = images[currentIndex];
+  });
+
+  closeBtn.addEventListener("click", closeModal);
+  modal.addEventListener("click", function (e) {
+    if (e.target === modal) {
+      closeModal();
+    }
+  });
+
+  // swipe for touchable outils
+  let touchStartX = 0;
+  let touchEndX = 0;
+
+  modal.addEventListener("touchstart", function (e) {
+    touchStartX = e.changedTouches[0].screenX;
+  });
+
+  modal.addEventListener("touchend", function (e) {
+    touchEndX = e.changedTouches[0].screenX;
+    handleSwipeGesture();
+  });
+
+  function handleSwipeGesture() {
+    if (touchEndX < touchStartX - 50) {
+      currentIndex = (currentIndex + 1) % images.length;
+      modalImg.src = images[currentIndex];
+    }
+    if (touchEndX > touchStartX + 50) {
+      currentIndex = (currentIndex - 1 + images.length) % images.length;
+      modalImg.src = images[currentIndex];
+    }
+  }
+});
+
 // https://unpkg.com/smoothscroll-polyfill@0.4.4/dist/smoothscroll.min.js
 
 /*
