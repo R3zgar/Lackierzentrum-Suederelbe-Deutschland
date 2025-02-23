@@ -228,6 +228,89 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 });
 
+//////////////////////////////////////////////////////////////
+// this code for EmailJS contat forum system
+document.addEventListener("DOMContentLoaded", function () {
+  // Initialize EmailJS
+  emailjs.init("0UZMSd_IeSkZh_a5T");
+
+  document
+    .getElementById("contact-form")
+    .addEventListener("submit", function (event) {
+      event.preventDefault(); // Prevent page reload
+
+      const serviceID = "service_gcd7909"; // EmailJS Service ID
+      const templateID = "template_qcku3tt"; // EmailJS Template ID
+
+      // Get user's first name
+      const userName = document.getElementById("full-name").value.trim();
+
+      // Collect form data
+      const params = {
+        "full-name": userName,
+        "last-name": document.getElementById("last-name").value,
+        "phone-number": document.getElementById("phone-number").value,
+        email: document.getElementById("email").value,
+        message: document.getElementById("message").value,
+      };
+
+      emailjs
+        .send(serviceID, templateID, params)
+        .then((response) => {
+          console.log("Email sent successfully:", response);
+          showStickySuccessMessage(userName); // Pass userName correctly
+          document.getElementById("contact-form").reset(); // Reset form
+        })
+        .catch((error) => {
+          console.error("EmailJS Error:", error); // Log error for debugging
+          showStickyErrorMessage();
+        });
+    });
+});
+
+// ✅ Fixed function: Pass `userName` as a parameter
+function showStickySuccessMessage(userName) {
+  showStickyMessage(
+    `<ion-icon name="checkmark-circle-outline" class="icon-success"></ion-icon> 
+    <strong>${userName},</strong> Ihre Anfrage wurde erfolgreich übermittelt. <br> 
+    Unser Team hat Ihre Anfrage erhalten und wird sich zeitnah mit Ihnen in Verbindung setzen.`,
+    "success"
+  );
+}
+
+function showStickyErrorMessage() {
+  showStickyMessage(
+    `<ion-icon name="close-circle-outline" class="icon-error"></ion-icon> 
+    <strong>Fehler!</strong> Ihre Anfrage konnte nicht übermittelt werden. <br> 
+    Bitte versuchen Sie es erneut oder kontaktieren Sie uns telefonisch.`,
+    "error"
+  );
+}
+
+function showStickyMessage(message, type) {
+  // Remove previous message if it exists
+  const existingMessage = document.querySelector(".sticky-alert");
+  if (existingMessage) {
+    existingMessage.remove();
+  }
+
+  // Create new message box
+  const messageBox = document.createElement("div");
+  messageBox.className = `sticky-alert ${type}`;
+  messageBox.innerHTML = `
+    <p>${message}</p>
+    <button class="close-btn" onclick="this.parentElement.remove()">×</button>
+  `;
+
+  // Append message below sticky menu
+  document.querySelector(".header").after(messageBox);
+
+  // Automatically remove after 9 seconds
+  setTimeout(() => {
+    messageBox.remove();
+  }, 9000);
+}
+
 // https://unpkg.com/smoothscroll-polyfill@0.4.4/dist/smoothscroll.min.js
 
 /*

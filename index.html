@@ -51,6 +51,9 @@
       src=" https://unpkg.com/smoothscroll-polyfill@0.4.4/dist/smoothscroll.min.js"
     ></script>
 
+    <!-- this script for EmailJS system.- for speed contact -->
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+
     <script defer src="js/script.js"></script>
 
     <title>
@@ -721,7 +724,7 @@
                 Qualität!
               </p>
 
-              <form class="cta-form" name="contact" data-netlify="true">
+              <form class="cta-form" id="contact-form">
                 <div>
                   <label for="full-name">Vorname</label>
                   <input
