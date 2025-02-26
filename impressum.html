@@ -51,7 +51,7 @@
       src=" https://unpkg.com/smoothscroll-polyfill@0.4.4/dist/smoothscroll.min.js"
     ></script>
 
-    <script defer src="../js/script.js"></script>
+    <!-- <script defer src="../js/script.js"></script> -->
 
     <title>
       Impressum &mdash; Lackierzentrum Süderelbe GmbH Perfekte
@@ -369,6 +369,22 @@
     </footer>
 
     <script>
+      ///////////////////////////////////////////////////////////
+      // Set current year-automatiqly change year every 1 janvier to current year
+
+      const yearEl = document.querySelector(".year");
+      const currentYear = new Date().getFullYear();
+      yearEl.textContent = currentYear;
+
+      ///////////////////////////////////////////////////////////
+      // Make mobile navigation work
+
+      const btnNavEl = document.querySelector(".btn-mobile-nav");
+      const headerEl = document.querySelector(".header");
+      btnNavEl.addEventListener("click", function () {
+        headerEl.classList.toggle("nav-open");
+      });
+
       document.addEventListener("DOMContentLoaded", function () {
         const impressumLinks = document.querySelectorAll(
           "a[href^='/index.html#']"
